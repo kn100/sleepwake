@@ -27,3 +27,14 @@ Restart=on-failure
 [Install]
 WantedBy=multi-user.target
 ```
+
+## Why?
+I wrote this because I have a USB hub that can connect to both my 
+work Mac, as well as my Linux personal machine. Like a crazy person, I added
+WiFi to said USB hub so I could "switch" the hub between my Mac and my PC by
+pressing buttons on my phone, rather than on the underside of my desk. Even 
+that was too inconvenient though, so I wrote this. Now, when my PC goes to 
+sleep, it makes a call out to my USB Hub API so trigger it to switch it over
+to my mac. When it wakes back up, it makes another call out to the USB Hub
+API to switch it back to the PC. If that sounds interesting, check out
+https://github.com/kn100/hubby/.
